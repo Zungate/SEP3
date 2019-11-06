@@ -1,0 +1,4 @@
+SEP3\Database\DatabaseConnect.class
+SEP3\Database\ProductHandler.class
+SEP3\Database\IProductHandler.class
+SEP3\Shared\Product.class

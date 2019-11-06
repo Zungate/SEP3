@@ -58,6 +58,7 @@ public class ProductHandler extends DatabaseConnect implements IProductHandler
     }
 
     @Override
+    @GET
     @Path("{id}")
     @Produces(APPLICATION_JSON)
     public Product getProduct(@PathParam("id") int id) throws SQLException

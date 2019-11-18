@@ -128,7 +128,6 @@ C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\Antlr3.Runtime.dll
 C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\Microsoft.Web.Infrastructure.dll
 C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\Newtonsoft.Json.dll
-C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\RestSharp.dll
 C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\System.Web.Helpers.dll
 C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\System.Web.Mvc.dll
 C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\System.Web.Optimization.dll
@@ -138,7 +137,6 @@ C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\System.Web.WebPages
 C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\System.Web.WebPages.Razor.dll
 C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\WebGrease.dll
 C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\Newtonsoft.Json.xml
-C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\RestSharp.xml
 C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\System.Web.Helpers.xml
 C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\System.Web.Mvc.xml
 C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\System.Web.Optimization.xml
@@ -152,3 +150,5 @@ C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\obj\Debug\RestSkeletonM
 C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\obj\Debug\RestSkeletonMVCClient.csproj.CopyComplete
 C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\obj\Debug\RestSkeletonMVCClient.dll
 C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\obj\Debug\RestSkeletonMVCClient.pdb
+C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\RestSharp.dll
+C:\Kode\SEP3\RestSkeletonMVCClient\RestSkeletonMVCClient\bin\RestSharp.xml

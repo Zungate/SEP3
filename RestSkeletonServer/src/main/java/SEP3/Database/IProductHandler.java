@@ -12,4 +12,6 @@ public interface IProductHandler
 {
     @WebMethod List<Product> getProducts() throws SQLException;
     @WebMethod Product getProduct(int id) throws SQLException;
+    @WebMethod void buyCart(Product product) throws SQLException;
+    @WebMethod List<Product> get10Products() throws SQLException;
 }

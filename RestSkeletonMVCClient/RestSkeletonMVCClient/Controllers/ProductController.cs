@@ -11,7 +11,7 @@ namespace RestSkeletonMVCClient.Controllers
 {
     public class ProductController : Controller
     {
-        public string GetProducts(string url)
+        public string GetJSON(string url)
         {
             var client = new RestClient(url);
 
@@ -23,10 +23,28 @@ namespace RestSkeletonMVCClient.Controllers
         public ActionResult Index()
         {
             //Produces JSON
-            var json = GetProducts("http://localhost:8080/RestSkeleton/products");
+            var json = GetJSON("http://localhost:8080/RestSkeleton/products");
 
             var products = JsonConvert.DeserializeObject<List<Product>>(json);
             return View(products);
+        }
+
+        // POST: Product/Buy
+        
+        public ActionResult Buy()
+        {
+            var json = GetJSON("http://localhost:8080/RestSkeleton/products/get10");
+            var products = JsonConvert.DeserializeObject<List<Product>>(json);
+            var client = new RestClient("http://localhost:8080/RestSkeleton/products/");
+            var request = new RestRequest("buy");
+
+            request.AddHeader("Content-type", "application/json");
+            request.AddParameter("application / json", json, ParameterType.RequestBody);
+
+            var response = client.Execute(request);
+
+            return View(products);
+
         }
         
         // GET: Product/Details/5

@@ -11,5 +11,13 @@ namespace RestSkeletonMVCClient.Models
         public string Title { get; set; }
         public string Size { get; set; }
         public string URL { get; set; }
+
+        public Product(int id, string title, string size, string uRL)
+        {
+            Id = id;
+            Title = title;
+            Size = size;
+            URL = uRL;
+        }
     }
 }

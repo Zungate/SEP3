@@ -14,7 +14,7 @@ namespace RestSkeletonTester
         {
             Program program = new Program();
             var json = program.GetJSON("http://localhost:8080/RestSkeleton/products/get10");
-                       
+
             var client = new RestClient("http://localhost:8080/RestSkeleton/products/");
             var request = new RestRequest("buy", Method.POST);
 
@@ -23,7 +23,10 @@ namespace RestSkeletonTester
             request.AddHeader("Content-Type", "application/json");
             request.Parameters.Clear();
             Console.WriteLine("Adding params");
+            request.RequestFormat = DataFormat.Json;
+            request.AddJsonBody(json);
             request.AddParameter("application/json", json, ParameterType.RequestBody);
+           
 
             var response = client.Execute(request);
 

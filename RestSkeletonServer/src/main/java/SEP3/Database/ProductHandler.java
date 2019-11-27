@@ -74,7 +74,8 @@ public class ProductHandler extends DatabaseConnect implements IProductHandler
     @POST
     @Path("/buy")
     @Consumes(APPLICATION_JSON)
-    public void buyCart(Product product) throws SQLException
+    @Produces(APPLICATION_JSON)
+    public void buyCart(List<Product> products) throws SQLException
     {
         String serverName = "localhost";
         try {
@@ -87,7 +88,10 @@ public class ProductHandler extends DatabaseConnect implements IProductHandler
             DataOutputStream out = new DataOutputStream(outputStream);
 
             out.writeUTF("Hej fra buy:");
-            out.writeUTF((product.getTitle()));
+            for (Product product: products)
+            {
+                System.out.println(product.getTitle());
+            }
 
             InputStream inFromServer = client.getInputStream();
             DataInputStream in = new DataInputStream(inFromServer);

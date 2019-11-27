@@ -19,5 +19,7 @@ namespace RestSkeletonTester
             Size = size;
             URL = uRL;
         }
+
+        public Product() { }
     }
 }

@@ -16,7 +16,7 @@ namespace RestSkeletonMVCClient.Controllers
             var client = new RestClient(url);
 
             var response = client.Execute(new RestRequest());
-
+            
             return response.Content;
         }
         // GET: Product
@@ -36,12 +36,15 @@ namespace RestSkeletonMVCClient.Controllers
             var json = GetJSON("http://localhost:8080/RestSkeleton/products/get10");
             var products = JsonConvert.DeserializeObject<List<Product>>(json);
             var client = new RestClient("http://localhost:8080/RestSkeleton/products/");
-            var request = new RestRequest("buy");
+            var request = new RestRequest("buy", Method.POST);
 
-            request.AddHeader("Content-type", "application/json");
-            request.AddParameter("application / json", json, ParameterType.RequestBody);
+            
+            request.AddHeader("Accept", "application/json");
+            request.Parameters.Clear();
+            request.AddParameter("application/json", json, ParameterType.RequestBody);
 
-            var response = client.Execute(request);
+            client.Execute(request);
+            
 
             return View(products);
 

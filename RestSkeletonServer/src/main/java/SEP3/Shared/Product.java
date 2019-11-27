@@ -15,6 +15,8 @@ public class Product
         this.size = size;
     }
 
+    public Product(){};
+
     public int getId()
     {
         return id;

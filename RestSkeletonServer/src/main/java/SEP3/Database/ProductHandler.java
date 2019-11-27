@@ -74,7 +74,6 @@ public class ProductHandler extends DatabaseConnect implements IProductHandler
     @POST
     @Path("/buy")
     @Consumes(APPLICATION_JSON)
-    @Produces(APPLICATION_JSON)
     public void buyCart(Product product) throws SQLException
     {
         String serverName = "localhost";
@@ -87,12 +86,13 @@ public class ProductHandler extends DatabaseConnect implements IProductHandler
             OutputStream outputStream = client.getOutputStream();
             DataOutputStream out = new DataOutputStream(outputStream);
 
-            out.writeUTF("Hej fra buy: " + product.getTitle());
+            out.writeUTF("Hej fra buy:");
+            out.writeUTF((product.getTitle()));
 
             InputStream inFromServer = client.getInputStream();
             DataInputStream in = new DataInputStream(inFromServer);
 
-            System.out.println("Server siger");
+            System.out.println("Server siger" + in.readUTF());
 
         } catch (UnknownHostException e)
         {

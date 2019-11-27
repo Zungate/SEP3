@@ -15,7 +15,6 @@ public class OrderMessageServer extends Thread
     public OrderMessageServer() throws IOException
     {
         serverSocket = new ServerSocket(9777);
-
     }
 
     public void run() {
@@ -26,7 +25,6 @@ public class OrderMessageServer extends Thread
 
                 System.out.println("Just connected to " + server.getRemoteSocketAddress());
                 DataInputStream in = new DataInputStream(server.getInputStream());
-
                 System.out.println(in.readUTF());
                 DataOutputStream out = new DataOutputStream(server.getOutputStream());
                 out.writeUTF("Thank you for connecting to " + server.getLocalSocketAddress()
